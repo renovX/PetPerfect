@@ -20,6 +20,21 @@ const generateData = async (n) => {
   await Book.collection.drop();
   const authorTable = [["id", "name", "email", "password"]],
     bookTable = [["id", "title"]];
+  //first dummy data which will be used in postman
+  const dummyauthorDoc = await Author.create({
+    _id: new mongoose.Types.ObjectId("6666a6bbcd66666666666e66"),
+    name: "dummy",
+    email: "dummy@bha.com",
+    password: await bcrypt.hash("12345", 10),
+    phone_number: "999-999-9999",
+    likedBooks: [],
+  });
+  const dummybookDoc = await Book.create({
+    _id: new mongoose.Types.ObjectId("6566a6bbcd66666666666e66"),
+    title: "dummy book",
+    likes: faker.datatype.number({ max: 100 }),
+    author: "dummy",
+  });
   for (let i = 0; i < n; i++) {
     const name = faker.name.firstName(),
       email = faker.internet.email(),

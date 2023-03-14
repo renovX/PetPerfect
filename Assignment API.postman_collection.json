@@ -1,0 +1,737 @@
+{
+	"info": {
+		"_postman_id": "f3c51de2-54a8-4271-8f91-acaeb01a8efc",
+		"name": "Assignment API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22902219"
+	},
+	"item": [
+		{
+			"name": "registor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Buddy\",\"email\":\"budd@gmail.com\",\"password\":\"12345\",\"phone_number\":\"98999999\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/registor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"registor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"dummy@bha.com\",\"passwd\":\"12345\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all authors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "all authors",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "664"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"298-ZsFAczjnaGh+jYzrc0QTHlAjAU0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 17:18:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"6410ac35786453d5fdc9e851\",\n        \"name\": \"Fred\",\n        \"email\": \"Wanda_Erdman87@yahoo.com\",\n        \"phone_number\": \"1-858-253-5749 x4498\",\n        \"noBooks\": 3\n    },\n    {\n        \"id\": \"6410ac36786453d5fdc9e859\",\n        \"name\": \"Rocio\",\n        \"email\": \"Jaquelin.Zemlak@yahoo.com\",\n        \"phone_number\": \"(549) 339-1801\",\n        \"noBooks\": 3\n    },\n    {\n        \"id\": \"6410ac37786453d5fdc9e861\",\n        \"name\": \"Kyla\",\n        \"email\": \"Athena_Halvorson@yahoo.com\",\n        \"phone_number\": \"600.894.1759 x21126\",\n        \"noBooks\": 3\n    },\n    {\n        \"id\": \"6410ac38786453d5fdc9e869\",\n        \"name\": \"Prudence\",\n        \"email\": \"Glennie_Zemlak33@hotmail.com\",\n        \"phone_number\": \"656-223-6103 x065\",\n        \"noBooks\": 3\n    },\n    {\n        \"id\": \"6410ac3a786453d5fdc9e871\",\n        \"name\": \"Nakia\",\n        \"email\": \"Dorris78@yahoo.com\",\n        \"phone_number\": \"(968) 741-8859 x83293\",\n        \"noBooks\": 3\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "authors/:id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/authors/6666a6bbcd66666666666e66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors",
+						"6666a6bbcd66666666666e66"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "authors/:id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/authors/6410afb7948e1ea5df7da1d8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"6410afb7948e1ea5df7da1d8"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "458"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ca-70tcWDd20Wz97mMVdQgTn6pT2ic\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 17:41:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6410afb7948e1ea5df7da1d8\",\n    \"name\": \"Leland\",\n    \"email\": \"Trystan94@hotmail.com\",\n    \"phone_number\": \"1-507-494-9340 x78455\",\n    \"books\": [\n        {\n            \"_id\": \"6410afb7948e1ea5df7da1da\",\n            \"title\": \"Island\",\n            \"likes\": 48,\n            \"author\": \"Leland\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6410afb8948e1ea5df7da1dc\",\n            \"title\": \"explicit THX\",\n            \"likes\": 70,\n            \"author\": \"Leland\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6410afb8948e1ea5df7da1de\",\n            \"title\": \"till prejudice Bicycle\",\n            \"likes\": 43,\n            \"author\": \"Leland\",\n            \"__v\": 0\n        }\n    ]\n}"
+				},
+				{
+					"name": "authors/:id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/authors/6410ac35786453d5fdc9e851",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"6410ac35786453d5fdc9e851"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-ojW36KPiOtIfwhCVUp83rhTdxOI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 17:39:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Author Not Found"
+				}
+			]
+		},
+		{
+			"name": "authors/me",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/authors/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/books/?page=3&limit=5&order=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "order",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "books",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/books/?page=3&limit=5&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "516"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"204-cTAqJGfVBdpgYwHGECgL2v0YOOM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 17:41:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6410afb8948e1ea5df7da1e2\",\n        \"title\": \"Northeast mmm partnerships\",\n        \"likes\": 54,\n        \"author\": \"Gussie\"\n    },\n    {\n        \"_id\": \"6410afb8948e1ea5df7da1dc\",\n        \"title\": \"explicit THX\",\n        \"likes\": 70,\n        \"author\": \"Leland\"\n    },\n    {\n        \"_id\": \"6410afbb948e1ea5df7da1f4\",\n        \"title\": \"surprisingly West Garden\",\n        \"likes\": 73,\n        \"author\": \"Ola\"\n    },\n    {\n        \"_id\": \"6410afbc948e1ea5df7da1fc\",\n        \"title\": \"Health Allan\",\n        \"likes\": 83,\n        \"author\": \"Mariane\"\n    },\n    {\n        \"_id\": \"6410afba948e1ea5df7da1f2\",\n        \"title\": \"Cotton\",\n        \"likes\": 96,\n        \"author\": \"Ola\"\n    }\n]"
+				},
+				{
+					"name": "books",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/books/?page=3&limit=5&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c-dAuDFQrdjS3hezqxDTNgW7AOlYk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 17:23:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Unauthorized"
+				}
+			]
+		},
+		{
+			"name": "like",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/books/like/6566a6bbcd66666666666e66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"like",
+						"6566a6bbcd66666666666e66"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "like",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/books/like/6410b3b70fdac32fdc818f19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								"like",
+								"6410b3b70fdac32fdc818f19"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "like",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/books/like/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								"like",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c-dAuDFQrdjS3hezqxDTNgW7AOlYk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 18:57:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Unauthorized"
+				}
+			]
+		},
+		{
+			"name": "unlike",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/books/unlike/6566a6bbcd66666666666e66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"unlike",
+						"6566a6bbcd66666666666e66"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
