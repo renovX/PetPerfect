@@ -42,3 +42,6 @@ In order to login, user must copy the author email and password from console tab
 
 
 ![alt text](https://github.com/renovX/PetPerfect/blob/main/tableformat.png?raw=true)
+   
+Backend Architecture Diagram:
+![alt text](https://github.com/renovX/PetPerfect/blob/main/BackendArchitecture.png?raw=true)
